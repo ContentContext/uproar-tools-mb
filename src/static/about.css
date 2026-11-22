@@ -1,0 +1,283 @@
+/* responsive */
+@media only screen and (min-width: 880px) {
+  .mob-only {
+    display: none; } }
+
+.desktop-only {
+  display: none; }
+  @media only screen and (min-width: 880px) {
+    .desktop-only {
+      display: block; } }
+
+/* colors */
+.flag-title {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-weight: 300; }
+  @media only screen and (min-width: 880px) {
+    .flag-title {
+      margin: 0 -8.3%; } }
+  .flag-title:before, .flag-title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #0000ff;
+    z-index: -1; }
+  .flag-title:before {
+    left: 0; }
+  .flag-title:after {
+    right: 0; }
+  .flag-title__title {
+    position: relative;
+    display: inline-block;
+    min-height: 29px;
+    padding: 5px 5px;
+    font-family: Oswald, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #0000ff;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+    @media only screen and (min-width: 880px) {
+      .flag-title__title {
+        min-height: 35px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 5px 25px;
+        font-size: 18px; } }
+    .flag-title__title:before, .flag-title__title:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 1px;
+      border-style: solid; }
+    .flag-title__title:before {
+      left: -11px;
+      border-width: 14px 11px 14px 0;
+      border-color: transparent #0000ff transparent transparent; }
+      @media only screen and (min-width: 880px) {
+        .flag-title__title:before {
+          left: -15px;
+          border-width: 18px 15px 18px 0; } }
+    .flag-title__title:after {
+      right: -11px;
+      border-width: 14px 0px 14px 11px;
+      border-color: transparent transparent transparent #0000ff; }
+      @media only screen and (min-width: 880px) {
+        .flag-title__title:after {
+          right: -15px;
+          border-width: 18px 0px 18px 15px; } }
+
+/* responsive */
+@media only screen and (min-width: 880px) {
+  .mob-only {
+    display: none; } }
+
+.desktop-only {
+  display: none; }
+  @media only screen and (min-width: 880px) {
+    .desktop-only {
+      display: block; } }
+
+/* colors */
+.page-header {
+  position: relative; }
+  .page-header .cols {
+    position: relative;
+    align-items: center; }
+    @media only screen and (min-width: 880px) {
+      .page-header .cols {
+        flex-direction: row-reverse; } }
+  @media only screen and (min-width: 880px) {
+    .page-header .col-6 {
+      max-width: 50%;
+      /* force the image to take certain position */ } }
+  .page-header__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 146px;
+    height: 146px;
+    margin: 0 auto;
+    z-index: 1;
+    /* make sure it displays above polygon image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media only screen and (min-width: 880px) {
+      .page-header__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+        -webkit-transform: translate(0, 50px);
+                transform: translate(0, 50px); } }
+  .page-header__title {
+    margin: 20px 0;
+    font-size: 28px;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300; }
+    @media only screen and (min-width: 880px) {
+      .page-header__title {
+        margin-top: 8px;
+        margin-bottom: 43px;
+        text-align: left;
+        font-size: 50px; } }
+    .page-header__title span {
+      margin-right: 10px; }
+    .page-header__title span:first-child {
+      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-style: normal;
+      font-weight: 700; }
+  .page-header__description {
+    max-width: 420px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-family: "Sentinel A", "Sentinel B", sans-serif;
+    font-style: normal;
+    font-weight: 400; }
+    @media only screen and (min-width: 880px) {
+      .page-header__description {
+        margin: 0;
+        font-size: 24px;
+        text-align: left; } }
+  .page-header__divider {
+    max-width: 395px;
+    height: 10px;
+    margin: -10px auto 22px;
+    border: 2px solid #0000ff; }
+    @media only screen and (min-width: 880px) {
+      .page-header__divider {
+        height: 6px;
+        margin: -10px 0 40px; } }
+
+/* responsive */
+@media only screen and (min-width: 880px) {
+  .mob-only {
+    display: none; } }
+
+.desktop-only {
+  display: none; }
+  @media only screen and (min-width: 880px) {
+    .desktop-only {
+      display: block; } }
+
+/* colors */
+.about__header {
+  margin-bottom: 30px; }
+  .about__header__image {
+    background-image: url(/static/frontend/about/header_image.f43fb61c3b70.png);
+    background-size: cover; }
+    @media only screen and (min-width: 880px) {
+      .about__header__image {
+        position: static;
+        width: 500px;
+        height: 500px;
+        -webkit-transform: translate(24px, 7px);
+                transform: translate(24px, 7px); } }
+  .about__header__title {
+    margin: 0 0 50px; }
+    @media only screen and (min-width: 880px) {
+      .about__header__title {
+        /* compensate for roary image to the right
+			which is pushing everything down */
+        margin-top: -80px;
+        margin-bottom: 40px; } }
+    .about__header__title span {
+      display: block; }
+    .about__header__title span:first-child {
+      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 57px; }
+  .about__header__description {
+    margin: 0 auto; }
+    @media only screen and (min-width: 880px) {
+      .about__header__description {
+        margin: 0; } }
+  .about__header__divider {
+    background-color: #0000ff; }
+
+/* responsive */
+@media only screen and (min-width: 880px) {
+  .mob-only {
+    display: none; } }
+
+.desktop-only {
+  display: none; }
+  @media only screen and (min-width: 880px) {
+    .desktop-only {
+      display: block; } }
+
+/* colors */
+.about-app {
+  position: relative;
+  color: #0000ff;
+  line-height: 1.5;
+  /* flag titles have all the same width on About page */ }
+  .about-app:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 120px;
+    opacity: 0.5;
+    background-size: cover;
+    background-image: url(/static/frontend/country_profile/dot_pattern.f323f779025c.png); }
+    @media only screen and (min-width: 880px) {
+      .about-app:before {
+        width: 400px;
+        height: 400px; } }
+  .about-app .section__copy {
+    padding: 30px 0;
+    text-align: center; }
+    @media only screen and (min-width: 880px) {
+      .about-app .section__copy {
+        padding: 40px 0 60px; } }
+    .about-app .section__copy p {
+      margin-bottom: 35px; }
+  .about-app__list {
+    -webkit-columns: 1;
+            columns: 1;
+    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-style: normal;
+    font-weight: 600; }
+    @media only screen and (min-width: 880px) {
+      .about-app__list {
+        padding: 25px 0;
+        -webkit-columns: 2;
+                columns: 2;
+        -webkit-column-gap: 30%;
+                column-gap: 30%;
+        font-size: 24px; } }
+    .about-app__list li {
+      margin-bottom: 5px; }
+    .about-app__list a {
+      display: block;
+      color: #000000; }
+      @media only screen and (min-width: 880px) {
+        .about-app__list a {
+          text-align: left; } }
+  .about-app .section--contact .section__copy {
+    padding: 70px 0 45px; }
+  .about-app__contact__email {
+    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: underline; }
+    @media only screen and (min-width: 880px) {
+      .about-app__contact__email {
+        font-size: 36px; } }
+  @media only screen and (min-width: 880px) {
+    .about-app .flag-title__title {
+      min-width: 195px; } }
+

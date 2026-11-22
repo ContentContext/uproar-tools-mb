@@ -1,0 +1,210 @@
+[
+  {
+    "id": 20,
+    "name": "Arrest and detention",
+    "display_name": "life, liberty, and personal security",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Conditions of detention OR RIGHT:Arbitrary arrest and detention"
+  },
+  {
+    "id": 21,
+    "name": "Association and assembly",
+    "display_name": "freedom of association and assembly",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Freedom of association OR RIGHT:Right to peaceful assembly"
+  },
+  {
+    "id": 13,
+    "name": "Children",
+    "display_name": "children",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Children: definition; general principles; protection OR RIGHT:Children: Juvenile justice OR RIGHT:Children: family environment and alternative care OR RIGHT:Children: protection against exploitation OR RIGHT:Children OR RIGHT:Youth OR RIGHT:Girls OR RIGHT:Children in street situations OR AFFECTED:Children OR AFFECTED:children in street situations OR AFFECTED:girls OR AFFECTED:youth"
+  },
+  {
+    "id": 32,
+    "name": "Death penalty and extrajudicial executions",
+    "display_name": "life",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Extrajudicial, summary or arbitrary executions OR RIGHT:Right to life OR RIGHT:Death penalty"
+  },
+  {
+    "id": 3,
+    "name": "Digital rights",
+    "display_name": "digital rights",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "SEARCH:digital OR SEARCH:online OR SEARCH:virtual OR SEARCH:cyber OR SEARCH:blog OR SEARCH:cybercrime OR SEARCH:computer OR SEARCH:website OR SEARCH:internet OR SEARCH:web OR SEARCH:Internet OR SEARCH:Computer OR SEARCH:offline OR SEARCH:defamation OR SEARCH:access information OR SEARCH:freedom information OR SEARCH:social media OR SEARCH:electronic OR SEARCH:cybercrimes OR SEARCH:bloggers"
+  },
+  {
+    "id": 23,
+    "name": "Due process",
+    "display_name": "due process",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Administration of justice OR RIGHT:Administration of justice & fair trial OR RIGHT:Children: Juvenile justice"
+  },
+  {
+    "id": 18,
+    "name": "Equality and non-discrimination",
+    "display_name": "equality and non-discrimination",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Discrimination against women OR RIGHT:Equality & non-discrimination OR RIGHT:Racial discrimination OR RIGHT:Advancement of women OR RIGHT:Persons with disabilities: accessibility, mobility OR RIGHT:S05 SDG 5 - Gender equality and women's empowerment OR RIGHT:Equality and non-discrimination"
+  },
+  {
+    "id": 14,
+    "name": "Ethnic, religious, and linguistic minorities",
+    "display_name": "ethnic, religious, and linguistic minorities",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Members of minorities OR AFFECTED:minorities/ racial, ethnic, linguistic, religious or descent-based groups"
+  },
+  {
+    "id": 22,
+    "name": "Free expression",
+    "display_name": "freedom of opinion and expression",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Freedom of opinion and expression"
+  },
+  {
+    "id": 28,
+    "name": "Free movement",
+    "display_name": "freedom of movement",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Freedom of movement"
+  },
+  {
+    "id": 17,
+    "name": "Human rights defenders",
+    "display_name": "human rights defenders",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "AFFECTED:human rights defenders OR SEARCH:human rights defenders"
+  },
+  {
+    "id": 15,
+    "name": "Indigenous peoples",
+    "display_name": "indigenous peoples",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "AFFECTED:Indigenous peoples"
+  },
+  {
+    "id": 16,
+    "name": "Journalists and media workers",
+    "display_name": "journalists and media workers",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "AFFECTED:media OR SEARCH:journalist OR SEARCH:journalists OR SEARCH:media workers OR SEARCH:bloggers"
+  },
+  {
+    "id": 19,
+    "name": "Justice and impunity",
+    "display_name": "an effective remedy and due process",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Right to an effective remedy OR RIGHT:Administration of justice & fair trial OR RIGHT:Transitional justice"
+  },
+  {
+    "id": 9,
+    "name": "LGBT+",
+    "display_name": "lesbian, gay, bisexual, transgender and intersex persons (LGBTI)",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Lesbian, gay, bisexual and transgender and intersex persons (LGBTI) OR AFFECTED:lesbian, gay, bisexual and transgender and intersex persons (LGBTI) OR SEARCH:sexual orientation OR SEARCH:gender identity OR SEARCH:LGBT OR SEARCH:sexual relationships OR SEARCH:same sex OR SEARCH:sexual minorities OR SEARCH:same-sex OR SEARCH:homosexuality OR SEARCH:lesbian OR SEARCH:gay OR SEARCH:bisexual OR SEARCH:transgender OR SEARCH:intersex"
+  },
+  {
+    "id": 25,
+    "name": "Marriage and family",
+    "display_name": "family life",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Rights related to marriage & family"
+  },
+  {
+    "id": 24,
+    "name": "Nationality and statelessness",
+    "display_name": "a nationality",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Rights related to name, identity, nationality OR RIGHT:Non-citizens OR RIGHT:Stateless persons"
+  },
+  {
+    "id": 12,
+    "name": "Non-citizens",
+    "display_name": "non-citizens",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Stateless persons OR RIGHT:Non-citizens OR AFFECTED:non-citizens"
+  },
+  {
+    "id": 30,
+    "name": "Participation in public and political life",
+    "display_name": "participation in public and political life",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Right to participation in public affairs and right to vote OR RIGHT:Participation of women in political and public life"
+  },
+  {
+    "id": 11,
+    "name": "People on the move",
+    "display_name": "people on the move",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Migrants OR RIGHT:Refugees & asylum seekers OR RIGHT:Internally displaced persons OR AFFECTED:migrants OR AFFECTED:refugees & asylum seekers OR AFFECTED:internally displaced persons"
+  },
+  {
+    "id": 10,
+    "name": "Persons with a disability",
+    "display_name": "persons with a disability",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Persons with disabilities: definition, general principles OR RIGHT:Persons with disabilities: protecting the integrity of the person OR RIGHT:Persons with disabilities: accessibility, mobility OR RIGHT:Persons with disabilities: protection and safety in situations of risk OR AFFECTED:persons with disabilities OR SEARCH:disabled OR SEARCH:disability"
+  },
+  {
+    "id": 29,
+    "name": "Privacy rights",
+    "display_name": "privacy",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Right to private life, privacy"
+  },
+  {
+    "id": 27,
+    "name": "Protection from violence",
+    "display_name": "protection against violence",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Violence against women OR RIGHT:Prohibition of slavery, trafficking OR RIGHT:Children: protection against exploitation OR RIGHT:Domestic violence OR RIGHT:Right to physical and moral integrity OR RIGHT:Persons with disabilities: protection against exploitation, violence and abuse OR RIGHT:Gender-based violence OR RIGHT:Persons with disabilities: protecting the integrity of the person"
+  },
+  {
+    "id": 31,
+    "name": "Religion and belief",
+    "display_name": "freedom of thought, conscience, and religion",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Freedom of thought, conscience and religion"
+  },
+  {
+    "id": 26,
+    "name": "Torture and ill-treatment",
+    "display_name": "protection against torture and ill-treatment",
+    "type_id": 1,
+    "set_id": 1,
+    "rule": "RIGHT:Conditions of detention OR RIGHT:Prohibition of torture and cruel, inhuman or degrading treatment"
+  },
+  {
+    "id": 8,
+    "name": "Women and girls",
+    "display_name": "women and girls",
+    "type_id": 2,
+    "set_id": 1,
+    "rule": "RIGHT:Discrimination against women OR RIGHT:Violence against women OR RIGHT:Gender-based violence OR RIGHT:Women OR RIGHT:Participation of women in political and public life OR RIGHT:Advancement of women OR AFFECTED:women OR AFFECTED:girls OR AFFECTED:rural women OR SEARCH:women OR SEARCH:girl OR SEARCH:girls"
+  }
+]
