@@ -3,7 +3,10 @@
 One-off import of the tools.uproar.fyi export (made from a browser on 22 Nov 2026)
 into this repository's `src/` and `data/` folders.
 
-Usage:  python3 scripts/import_export.py <export-dir>
+Usage:  python3 scripts/import_export.py <export-dir> [--src]
+
+By default only data/ and tests/reference/ are (re)written. --src also overwrites src/pages
+and src/static with the export, which discards every edit made to them since: don't.
 
 <export-dir> must contain:
   files.json     {url: {status, ct, b64}} for every page, bundle, stylesheet and image
@@ -120,6 +123,8 @@ def matchmaker_stats(mm, cid):
     for key, q in mm.items():
         t, cy, sur = key.split('|')
         rows = q['rows']
+        if not t:
+            continue  # no-topic responses carry no topic statistics
         c = out['cycles'].setdefault(cy, {'global_num_reviews': None, 'pool': set(), 'reviews': {}, 'topics': {}})
         tt = c['topics'].setdefault(t, {'rs': {}})
         for x in rows:
@@ -162,7 +167,7 @@ def matchmaker_stats(mm, cid):
     return out
 
 
-def main(exp):
+def main(exp, with_src=False):
     files = json.load(open(os.path.join(exp, 'files.json')))
     pages_html = {}
     for url, f in files.items():
@@ -170,6 +175,9 @@ def main(exp):
         if url in PAGES:
             html = raw.decode('utf-8')
             pages_html[url] = html
+        if not with_src:
+            continue
+        if url in PAGES:
             write(os.path.join(SRC, 'pages', PAGES[url]), clean_page(html))
         elif url == '/jsi18n/':
             write(os.path.join(SRC, 'static', 'jsi18n.js'), raw, 'wb')
@@ -218,7 +226,11 @@ def main(exp):
     # ---- matchmaker statistics (see docs/matchmaker.md)
     e2 = os.path.join(exp, 'export2.json')
     if os.path.exists(e2):
-        dump(os.path.join(DATA, 'matchmaker-stats.json'), matchmaker_stats(json.load(open(e2))['mmStats'], cid))
+        mm = json.load(open(e2))['mmStats']
+        e3 = os.path.join(exp, 'export3.json')  # cycle=all and no-topic responses, 22 Nov 2026
+        if os.path.exists(e3):
+            mm.update(json.load(open(e3))['mmStats'])
+        dump(os.path.join(DATA, 'matchmaker-stats.json'), matchmaker_stats(mm, cid))
 
     # ---- reference responses for tests
     dump(os.path.join(ROOT, 'tests', 'reference', 'matches.json'), json.load(open(os.path.join(exp, 'matches.json'))))
@@ -226,4 +238,4 @@ def main(exp):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], '--src' in sys.argv[2:])

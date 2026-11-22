@@ -26,7 +26,12 @@
   function norm(v, lo, hi) { return hi === lo ? 1 : clamp01((v - lo) / (hi - lo)); }
 
   function matches(db, p, baseUrl) {
-    var sur = Number(p.country), topic = Number(p.topic), cycle = Number(p.cycle);
+    var sur = Number(p.country);
+    // The Matchmaker page asks for cycle=all unless the URL names one; topic may be left empty.
+    var allCycles = String(p.cycle) === 'all', cycle = allCycles ? 'all' : Number(p.cycle);
+    var noTopic = p.topic === undefined || p.topic === '';
+    var topic = noTopic ? null : Number(p.topic);
+    var inCycle = function (r) { return allCycles || r.cycle === cycle; };
     var limit = p.limit === undefined || p.limit === '' ? 20 : Number(p.limit);
     var offset = Number(p.offset) || 0;
     var w = String(p.weights || '').split(',').map(Number);
@@ -34,12 +39,12 @@
 
     var M = db.matchmaker, cy = M && M.cycles[String(cycle)];
     if (!cy) return { count: 0, next: null, previous: null, results: [] };
-    var tstats = (cy.topics[String(topic)] || { rs: {}, lo: 0, hi: 0, lo2: 0, hi2: 0 });
+    var tstats = (cy.topics[noTopic ? '' : String(topic)] || { rs: {}, lo: 0, hi: 0, lo2: 0, hi2: 0 });
 
     // Recommendations to the SUR in this cycle, grouped by RS.
     var toSur = {}, distinctRs = 0, totalToSur = 0, topicS = 0, topicN = 0;
     db.rows.forEach(function (r) {
-      if (r.cycle !== cycle) return;
+      if (!inCycle(r)) return;
       if (r.topics.indexOf(topic) !== -1) { if (r.resp === 1) topicS++; else if (r.resp === 2) topicN++; }
       if (r.sur !== sur || r.rs == null) return;
       var g = toSur[r.rs];
@@ -49,7 +54,7 @@
       if (r.resp === 1) g.S++; else if (r.resp === 2) g.N++; else if (r.resp === 3) g.SN++;
     });
     var made = {};
-    db.rows.forEach(function (r) { if (r.cycle === cycle && r.rs != null) made[r.rs] = (made[r.rs] || 0) + 1; });
+    db.rows.forEach(function (r) { if (inCycle(r) && r.rs != null) made[r.rs] = (made[r.rs] || 0) + 1; });
 
     var pool = cy.pool.filter(function (id) { return id !== sur; });
     var empty = { n: 0, nt: 0, S: 0, N: 0, SN: 0 };
@@ -75,11 +80,11 @@
       var rev = cy.reviews[String(f.id)] || 0;
       var s = [
         maxN ? f.g.n / maxN : 1,
-        maxT ? f.g.nt / maxT : 1,
-        norm(f.z, zl, zh),
+        noTopic ? 0 : (maxT ? f.g.nt / maxT : 1),
+        noTopic ? 0 : norm(f.z, zl, zh),
         rev / (gnr + 1),
-        norm(st[2], tstats.lo, tstats.hi),
-        1 - norm(st[5], tstats.lo2, tstats.hi2)
+        noTopic ? 0 : norm(st[2], tstats.lo, tstats.hi),
+        noTopic ? 0 : 1 - norm(st[5], tstats.lo2, tstats.hi2)
       ];
       var ranking = 0;
       for (var i = 0; i < 6; i++) ranking += w[i] * s[i];
@@ -98,6 +103,7 @@
           }
         ],
         num_recs: made[f.id] || 0,
+        _noTopic: noTopic,
         _rev: rev
       };
     });
@@ -105,7 +111,11 @@
       return (b.ranking - a.ranking) || (b._rev - a._rev) ||
         (b.categories[0].num_recs - a.categories[0].num_recs) || (a.name < b.name ? -1 : 1);
     });
-    results.forEach(function (r) { delete r._rev; });
+    results.forEach(function (r) {
+      // Without a topic the original API marks the support and topic-champion columns disabled.
+      if (r._noTopic) { r.categories[1] = { disabled: true }; r.categories[3] = { disabled: true }; }
+      delete r._rev; delete r._noTopic;
+    });
 
     function link(o) {
       if (!baseUrl) return null;

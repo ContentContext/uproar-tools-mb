@@ -4,13 +4,20 @@ The original Matchmaker was scored on the Django server, and its source code was
 available for the rebuild. The algorithm below was reverse-engineered from the live
 `/api/v1/matches/` endpoint on 22 November 2026, then checked against 189 live
 responses: 28,058 ranked rows covering every topic and cycle, with varied slider
-weights. Every ranking, category value, count and the result order match the live
+weights. A second capture added cycle=all and no-topic queries (255 queries,
+39,129 rows in total). Every ranking, category value, count and the result order match the live
 site exactly (`npm test`, and `node tests/matchmaker.test.cjs <export2.json>` for the
 full set).
 
 Implementation: [`src/shim/matchmaker.js`](../src/shim/matchmaker.js).
 
 ## Inputs
+
+* The page asks for **cycle=all** unless the URL names a cycle: every cycle together, with its own
+  pool (172 states) and statistics.
+* The **topic** may be empty. Then s1, s2, s4 and s5 count as 0 (their weights still count in the
+  denominator) and the support and topic-champion columns come back as `{"disabled": true}`.
+
 
 * **Country under review** (SUR), **topic** and **cycle**.
 * Six slider **weights** `w0..w5` (defaults `50, 75, 0, 50, 50, 0`; `w2` runs from -200 to 200).

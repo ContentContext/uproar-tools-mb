@@ -5,7 +5,7 @@
   "description": "UPRoar tools: Universal Periodic Review advocacy tools, rebuilt as a static site.",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node tests/search.test.cjs && node tests/matchmaker.test.cjs",
+    "test": "node tests/search.test.cjs && node tests/matchmaker.test.cjs tests/reference/matches-compact.json",
     "serve": "npm run build && cd dist && python3 -m http.server 8000"
   },
   "license": "UNLICENSED"
