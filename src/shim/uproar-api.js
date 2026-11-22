@@ -19,7 +19,8 @@
   var cache = {};
   function getJSON(name) {
     if (!cache[name]) {
-      cache[name] = realFetch(DATA + name, { credentials: 'same-origin' }).then(function (r) {
+      var v = window.UPROAR_VERSION ? '?v=' + window.UPROAR_VERSION : '';
+      cache[name] = realFetch(DATA + name + v, { credentials: 'same-origin' }).then(function (r) {
         if (!r.ok) throw new Error('Could not load ' + name + ' (' + r.status + ')');
         return r.json();
       });

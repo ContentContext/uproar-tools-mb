@@ -13,6 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'src');
@@ -31,6 +32,19 @@ const PAGES = {
   'rec-directory.html': 'rec-directory/',
 };
 const SHIM = ['fulltext.js', 'engine.js', 'matchmaker.js', 'uproar-api.js'];
+
+// Cache-busting: GitHub Pages lets browsers cache files for 10 minutes, so a changed script,
+// stylesheet or data file could be served stale right after a deploy. Every local asset URL
+// in the pages and every data request carries ?v=<hash of src/ and data/>.
+function hashDir(dir, h) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+    const f = path.join(dir, e.name);
+    if (e.isDirectory()) hashDir(f, h); else { h.update(e.name); h.update(fs.readFileSync(f)); }
+  }
+  return h;
+}
+const VERSION = hashDir(path.join(ROOT, 'data'), hashDir(SRC, crypto.createHash('sha1'))).digest('hex').slice(0, 10);
+const bust = (u) => (/\.(css|js)$/.test(u) ? `${u}?v=${VERSION}` : u);
 
 function copyDir(from, to, transform) {
   fs.mkdirSync(to, { recursive: true });
@@ -58,14 +72,14 @@ function transformAsset(text, name) {
 
 function transformPage(html) {
   html = html.replace(/\b(href|src)="https:\/\/tools\.uproar\.fyi(\/static\/[^"]*)"/g, '$1="$2"');
-  html = html.replace(/\b(href|src|action)="(\/[^"]*)"/g, (m, a, u) => `${a}="${u === '/jsi18n/' ? BASE + 'static/jsi18n.js' : rebase(u)}"`);
+  html = html.replace(/\b(href|src|action)="(\/[^"]*)"/g, (m, a, u) => `${a}="${bust(u === '/jsi18n/' ? BASE + 'static/jsi18n.js' : rebase(u))}"`);
   // Django-rendered `var links = {'home': '/', 'about': '/about/', ...}`
   html = html.replace(/var links = \{[^}]*\}/g, (m) => m.replace(/'(\/[^']*)'/g, (mm, u) => `'${rebase(u)}'`));
   html = html.replace(/https:\/\/tools\.uproar\.fyi(?=[/"])/g, SITE_URL);
-  const shim = [`<script>window.UPROAR_BASE = ${JSON.stringify(BASE)};</script>`]
-    .concat(SHIM.map((f) => `<script src="${BASE}static/shim/${f}"></script>`)).join('\n');
+  const shim = [`<script>window.UPROAR_BASE = ${JSON.stringify(BASE)}; window.UPROAR_VERSION = ${JSON.stringify(VERSION)};</script>`]
+    .concat(SHIM.map((f) => `<script src="${bust(BASE + 'static/shim/' + f)}"></script>`)).join('\n');
   // The shim must load before the page bundles (it patches window.fetch).
-  html = html.replace(/(<script[^>]*src="[^"]*\/static\/jsi18n\.js"[^>]*><\/script>)/, `${shim}\n$1`);
+  html = html.replace(/(<script[^>]*src="[^"]*\/static\/jsi18n\.js[^"]*"[^>]*><\/script>)/, `${shim}\n$1`);
   return html;
 }
 
@@ -91,4 +105,4 @@ fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html><meta charset="utf
 fs.copyFileSync(path.join(SRC, 'static', 'robots.txt'), path.join(DIST, 'robots.txt'));
 fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
 if (process.env.CNAME) fs.writeFileSync(path.join(DIST, 'CNAME'), process.env.CNAME + '\n');
-console.log(`Built dist/ for BASE=${BASE} SITE_URL=${SITE_URL}`);
+console.log(`Built dist/ for BASE=${BASE} SITE_URL=${SITE_URL} version=${VERSION}`);
