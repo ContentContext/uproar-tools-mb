@@ -1232,3 +1232,8 @@ ul {
 @media (max-width: 920px) {
   .header__desktop__narrow__menu, .header .header__desktop-menu__item a { font-size: 11px; }
 }
+
+/* Mobile menu and footer links match the navigation: regular weight.
+   The mobile menu keeps its larger 20px touch-friendly size; the footer goes 13px -> 15.4px. */
+.mob-menu, .mob-menu li a { font-weight: 400; }
+.footer__menu { font-size: 15.4px; }
