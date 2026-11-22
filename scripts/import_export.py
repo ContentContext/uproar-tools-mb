@@ -54,9 +54,9 @@ def inline_var(html, name):
 def clean_page(html):
     # Google Analytics (old UA property, no consent banner) -> removed.
     html = re.sub(r'\s*<!-- Global site tag \(gtag\.js\).*?</script>\s*<script>.*?</script>', '\n', html, flags=re.S)
-    # Cloudflare-hosted Oswald -> self-hosted copy (see src/static/fonts/oswald.css).
+    # Cloudflare-hosted Oswald -> self-hosted copy (see src/static/fonts/fonts.css).
     html = re.sub(r'<style type="text/css">@font-face \{font-family:\'Oswald\'.*?</style>',
-                  '<link rel="stylesheet" href="/static/fonts/oswald.css">', html, flags=re.S)
+                  '<link rel="stylesheet" href="/static/fonts/fonts.css">', html, flags=re.S)
     # Django CSRF token is meaningless on a static site.
     html = re.sub(r'(name="csrfmiddlewaretoken" value=")[^"]*(")', r'\1\2', html)
     # Cloudflare email-obfuscation / beacon scripts, if any.

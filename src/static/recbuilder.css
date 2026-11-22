@@ -118,7 +118,7 @@
           width: 230px;
           height: 230px; } }
     .tools-list__tool__name {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px; }
@@ -331,14 +331,14 @@
     .page-header__title span {
       margin-right: 10px; }
     .page-header__title span:first-child {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
   .page-header__description {
     max-width: 420px;
     margin: 0 auto 30px;
     text-align: center;
-    font-family: "Sentinel A", "Sentinel B", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-style: normal;
     font-weight: 400; }
     @media only screen and (min-width: 880px) {
@@ -553,7 +553,7 @@
     left: -7px;
     margin-top: 15px;
     text-transform: uppercase;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     color: #3c00ff;
     font-size: 11px; }
   .recbuilder-app__rec__close-btn {
@@ -625,7 +625,7 @@
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500; }
   @media only screen and (min-width: 880px) {
@@ -915,7 +915,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Whitney A", "Whitney B", sans-serif; }
+    font-family: "Fira Sans", sans-serif; }
   .recbuilder-app__show-btn {
     padding: 10px 4px;
     font-size: 14px;
@@ -943,7 +943,7 @@
   .recbuilder-app__questions-header {
     display: flex;
     border-bottom: 1px solid #838383;
-    font-family: "Whitney A", "Whitney B", sans-serif; }
+    font-family: "Fira Sans", sans-serif; }
   .recbuilder-app__questions-group {
     flex: 1 0 auto;
     padding: 15px 0 8px;
@@ -972,7 +972,7 @@
         .recbuilder-app__questions-group--active {
           border-bottom: 4px solid #0000ff; } }
   .recbuilder-app__questions {
-    font-family: "Whitney A", "Whitney B", sans-serif; }
+    font-family: "Fira Sans", sans-serif; }
     @media only screen and (min-width: 880px) {
       .recbuilder-app__questions {
         width: 50%; } }

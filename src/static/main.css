@@ -394,7 +394,7 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   background-color: white;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSI5cHgiIHZpZXdCb3g9IjAgMCAxNiA5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1NS4yICg3ODE4MSkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+UmVjdGFuZ2xlIENvcHkgMTQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iVVBST0FSLS0tVG9vbHMtLS1TZWxlY3RlZC1wYWdlcyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IjAxLUNvdW50cnktUHJvZmlsZS0tLVNpbXBsZS1Db3B5LTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00NTkuMDAwMDAwLCAtNTM1LjAwMDAwMCkiIHN0cm9rZT0iIzAwMDBGRiIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwNS4wMDAwMDAsIDUxNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUmVjdGFuZ2xlLUNvcHktMTQiIHBvaW50cz0iMzY5IDE5IDM2MiAyNSAzNTUgMTkiPjwvcG9seWxpbmU+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
   background-repeat: no-repeat, repeat;
@@ -474,7 +474,7 @@ button {
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500; }
   @media only screen and (min-width: 880px) {
@@ -644,12 +644,12 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: "Sentinel A", "Sentinel B", sans-serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 20px;
   font-weight: 400; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-weight: normal;
   margin: 0; }
 
@@ -744,7 +744,7 @@ ul {
   top: 0;
   z-index: 10;
   width: 100%;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500; }
   .header__top-band {
@@ -982,7 +982,7 @@ ul {
           transform: translate(0, 0);
   transition: .3s transform;
   will-change: transition;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
   /* hidden default as it's display above site-content */
@@ -1097,7 +1097,7 @@ ul {
     .footer__logo h3 {
       margin-bottom: 43px;
       font-size: 15px;
-      font-family: "Sentinel A", "Sentinel B", sans-serif;
+      font-family: "Libre Baskerville", serif;
       font-style: normal;
       font-weight: 300; }
     .footer__logo .logo {
@@ -1116,7 +1116,7 @@ ul {
     .footer h4.tools-title {
       font-weight: 100; }
     .footer h4.fyi-title {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
   .footer h5 {
@@ -1135,7 +1135,7 @@ ul {
     font-size: 13px;
     letter-spacing: 0.87px;
     text-transform: uppercase;
-    font-family: "Whitney A", "Whitney B", sans-serif; }
+    font-family: "Fira Sans", sans-serif; }
   @media only screen and (min-width: 880px) {
     .footer__social, .footer__contact-form {
       margin-right: 25%; } }
@@ -1173,7 +1173,7 @@ ul {
       margin-top: 25px;
       text-transform: uppercase;
       color: #ffffff;
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-size: 15px; }
       .footer__contact-form__button.button:before {
         top: 10px;
@@ -1192,7 +1192,7 @@ ul {
         background-color: #ffffff; }
   .footer__menu {
     padding: 0 0 40px;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 13px; }
     .footer__menu:before {
       content: '';
@@ -1207,7 +1207,7 @@ ul {
       text-transform: uppercase; }
   .footer__last-updated {
     padding: 20px 0;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     text-transform: uppercase; }
 
 /*

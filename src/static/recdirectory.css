@@ -118,7 +118,7 @@
           width: 230px;
           height: 230px; } }
     .tools-list__tool__name {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px; }
@@ -187,7 +187,7 @@
   .pagination__button {
     color: #0000ff; }
     .pagination__button--active {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       text-decoration: underline; }
@@ -404,14 +404,14 @@
     .page-header__title span {
       margin-right: 10px; }
     .page-header__title span:first-child {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
   .page-header__description {
     max-width: 420px;
     margin: 0 auto 30px;
     text-align: center;
-    font-family: "Sentinel A", "Sentinel B", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-style: normal;
     font-weight: 400; }
     @media only screen and (min-width: 880px) {
@@ -452,7 +452,7 @@
   border-radius: 16px;
   transition: .3s color, .3s background-color;
   white-space: nowrap;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 400; }
   .ios-switch__input {
@@ -655,7 +655,7 @@
     border-bottom: 1px solid #ff675d;
     background-color: transparent;
     outline: 0;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 300; }
     .recdirectory-app__search-form__input:focus {
@@ -971,7 +971,7 @@
     .recdirectory-app__results__row__col--main {
       flex: 0 0 100%;
       font-size: 18px;
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
     .recdirectory-app__results__row__col__inner {
@@ -979,13 +979,13 @@
   .recdirectory-app__results__row__title {
     text-transform: uppercase;
     font-size: 12px;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 600; }
   .recdirectory-app__results__row__value {
     margin-bottom: 20px;
     font-size: 16px;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 300; }
     @media only screen and (min-width: 880px) {
@@ -1023,7 +1023,7 @@
 /* colors */
 .recdirectory-app {
   line-height: 1.5;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 300; }
   .recdirectory-app:before {

@@ -132,14 +132,14 @@
     .page-header__title span {
       margin-right: 10px; }
     .page-header__title span:first-child {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
   .page-header__description {
     max-width: 420px;
     margin: 0 auto 30px;
     text-align: center;
-    font-family: "Sentinel A", "Sentinel B", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-style: normal;
     font-weight: 400; }
     @media only screen and (min-width: 880px) {
@@ -192,7 +192,7 @@
     .about__header__title span {
       display: block; }
     .about__header__title span:first-child {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 57px; }
@@ -247,7 +247,7 @@
   .about-app__list {
     -webkit-columns: 1;
             columns: 1;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 600; }
     @media only screen and (min-width: 880px) {
@@ -269,7 +269,7 @@
   .about-app .section--contact .section__copy {
     padding: 70px 0 45px; }
   .about-app__contact__email {
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

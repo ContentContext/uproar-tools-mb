@@ -118,7 +118,7 @@
           width: 230px;
           height: 230px; } }
     .tools-list__tool__name {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px; }
@@ -263,14 +263,14 @@
     .page-header__title span {
       margin-right: 10px; }
     .page-header__title span:first-child {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700; }
   .page-header__description {
     max-width: 420px;
     margin: 0 auto 30px;
     text-align: center;
-    font-family: "Sentinel A", "Sentinel B", sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-style: normal;
     font-weight: 400; }
     @media only screen and (min-width: 880px) {
@@ -324,7 +324,7 @@
     .country-profile__header__title span:first-child {
       margin-bottom: -10px;
       font-size: 57px;
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       letter-spacing: -3px; }
   .country-profile__header__description {
     margin: 0 auto; }
@@ -402,7 +402,7 @@
     .ordered-list__item__title {
       display: flex;
       font-size: 20px;
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 600; }
       @media only screen and (min-width: 880px) {
@@ -461,7 +461,7 @@
   .upr-timeline__item__title {
     margin-bottom: 10px;
     font-size: 21px;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 700; }
   .upr-timeline__item__list {
@@ -503,7 +503,7 @@
 
 /* colors */
 .upr-timeline {
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 400; }
   .upr-timeline__dates {
@@ -567,7 +567,7 @@
           font-weight: 100; }
         .upr-timeline__timeline__label__inner span:last-child {
           font-size: 15px;
-          font-family: "Whitney A", "Whitney B", sans-serif;
+          font-family: "Fira Sans", sans-serif;
           font-style: normal;
           font-weight: 400; }
       .upr-timeline__timeline__label--now {
@@ -764,7 +764,7 @@
 
 /* colors */
 .chat {
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500; }
   .chat__header {
@@ -787,7 +787,7 @@
       flex: 1;
       padding: 0 10px; }
     .chat__header__title {
-      font-family: "Whitney A", "Whitney B", sans-serif;
+      font-family: "Fira Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
       margin: 0;
@@ -868,7 +868,7 @@
   .country-profile__lists {
     margin: 40px 0;
     color: #000000;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 400; }
     @media only screen and (min-width: 880px) {
@@ -922,7 +922,7 @@
       .country-profile__divider {
         width: 144px; } }
   .country-profile__chat {
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #000000; }
@@ -981,7 +981,7 @@
   flex-direction: column;
   padding-bottom: 22px;
   font-size: 16px;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 700; }
   @media only screen and (min-width: 880px) {
@@ -1056,7 +1056,7 @@
   .country-app__country-selector {
     max-width: 400px;
     margin: 30px auto;
-    font-family: "Whitney A", "Whitney B", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 16px;
     /* make sure placeholder fits on iphone SE */ }
     @media only screen and (min-width: 360px) {

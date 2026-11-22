@@ -36,7 +36,7 @@ the live site.
 
 ```
 src/pages/      the six page templates (rendered HTML from the live site, lightly cleaned)
-src/static/     original CSS, JS bundles, images and translation catalogue (jsi18n.js), plus self-hosted Oswald
+src/static/     original CSS, JS bundles, images and translation catalogue (jsi18n.js), plus self-hosted fonts
 src/shim/       the in-browser API: fulltext.js, engine.js, matchmaker.js, uproar-api.js
 data/           recommendations, countries, topics, cycles, country profiles, Matchmaker statistics
 scripts/        build.mjs (builds dist/), import_export.py (one-off import from the live site)
@@ -64,7 +64,9 @@ repository variables `BASE=/`, `CNAME=<domain>` and `SITE_URL=https://<domain>`.
 
 * **Google Analytics removed.** The old Universal Analytics property no longer works
   and had no consent banner. `gtag()` calls from the bundles are now no-ops.
-* **Oswald self-hosted** instead of loaded from Cloudflare.
+* **Fonts:** Whitney → **Fira Sans** and Sentinel → **Libre Baskerville** (the
+  Hoefler&Co originals were licensed to the old domain only). Oswald is kept. All three
+  are self-hosted from `src/static/fonts/` (no requests to Google or Cloudflare).
 * **About page:** the template rendered empty `links` / `numRecommendations` variables,
   which caused a script error on the live site. They are now filled in.
 * **Recommendation builder:** the template loaded its data and bundle twice. It now
@@ -73,11 +75,6 @@ repository variables `BASE=/`, `CNAME=<domain>` and `SITE_URL=https://<domain>`.
 
 ## Still to do
 
-* **Fonts.** The design uses Whitney and Sentinel from Hoefler&Co's Cloud.typography
-  (`https://cloud.typography.com/7329856/6586412/css/fonts.css`). That font project is
-  licensed per domain, so on a new domain the pages fall back to the system sans-serif.
-  Add the new domain to the Cloud.typography project (or switch fonts) to restore
-  the original typography.
 * **Newsletter sign-up.** Point `window.UPROAR_NEWSLETTER_URL` at a form endpoint
   (e.g. Mailchimp, Buttondown, Formspree) that accepts `{email}` and returns
   `{success, msg}`.
